@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
 $(document).ready(function(){
     $('#keyboard-upper-container').hide()
     $(document).keydown(function(e){
@@ -22,14 +17,12 @@ $(document).ready(function(){
     });
 
     $(document).keypress(function(e){
-            $('#'+e.keyCode).toggle.css('background-color','yellow');
-                
-   
-      
-    });
+        $(keyCode).toggle(function(){
+            $('#'+e.keyCode).css('background-color','yellow');
+        })
+    });   
+    $(document).bind('keydown', 'ctrl+c', f);
     
-
-
     
 });
 
