@@ -9,11 +9,12 @@
     letter-spacing: 3px;
   }
   
-  #yellow-block {
+  .yellow-block {
     position: absolute;
-    margin-top: 10px;
+   
+    margin-bottom: 15px;
     width: 15px;
-    height: 15px;
+    height: 25px;
     background-color: yellow;
   }
 
