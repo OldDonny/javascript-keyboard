@@ -7,9 +7,8 @@ var characterCounter = 0
 
 $(document).ready(function () {
 
-    promptHightLight();
-    setSentence()
-
+ 
+//keyboards-shift button//
     $('#keyboard-upper-container').hide()
     $(document).keydown(function (e) {
         if (e.keyCode == 16) {
@@ -24,6 +23,8 @@ $(document).ready(function () {
             $('#keyboard-lower-container').show();
         };
     });
+//keyboards-shift button//    
+//key highlighting//
     $(document).keydown(function (e) {
         if (e.keyCode != 16) {
             if (e.keyCode >= 65 && e.keyCode <= 90) {
@@ -46,8 +47,12 @@ $(document).ready(function () {
             }
         }
     });
+//key highlighting//    
+});
 
 
+
+//yellow block tracking//
     function promptHightLight() {
         $("#letter-" + (characterCounter - 1)).css('background-color', 'yellow')
         if (characterCounter != 0) {
@@ -63,7 +68,9 @@ $(document).ready(function () {
             
         }
     }
+//yellow block tracking//
 
+//connection of check remove-keys and key board//
     var num = (0)
     var n1 = (num + 1)
 
@@ -76,7 +83,6 @@ $(document).ready(function () {
         if (n === x) {
             $('#target-letter').text(sentences[0].charAt(n1++));
             n = sentences[0].charAt(num++)
-            promptHightLight();
 
 
 
@@ -87,5 +93,6 @@ $(document).ready(function () {
     });
 
 
-});
+
+//connection of check remove-keys and key board//
 
